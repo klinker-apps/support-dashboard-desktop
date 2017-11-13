@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Klinker Apps Dashboard</title>
+    <style>
+      html, body {
+          height: 100%;
+          width: 100%;
+          background: #EEEEEE;
+          padding: 0;
+          margin: 0;
+      }
+
+      webview {
+          margin: 0 auto;
+          overflow-x: hidden;
+          overflow-y: hidden;
+      }
+
+      #upper-half {
+          width: 100%;
+          height: 50%;
+      }
+      #lower-half {
+          width: 100%;
+          height: 50%;
+      }
+
+      #upper-left {
+          float: left;
+          width: 33%;
+          height: 100%;
+      }
+      #upper-middle {
+          margin: auto;
+          width: 34%;
+          height: 100%;
+      }
+      #upper-right {
+          float: right;
+          width: 33%;
+          height:100%;
+      }
+
+      .half-height {
+          width: 100%;
+          height: 50%;
+      }
+
+      #lower-left {
+          float: left;
+          width: 50%;
+          height:100%;
+      }
+      #lower-right {
+          float: right;
+          width: 50%;
+          height:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="upper-half">
+      <div id="upper-left">
+        <webview class="half-height" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://payments.google.com/payments/u/0/home?bcn=794839672874#subscriptionsAndServices"></webview>
+        <webview class="half-height" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://console.firebase.google.com/u/0/project/messenger-42616/analytics/app/android:xyz.klinker.messenger/events~2Freport~2Fin_app_purchase%3FdataFilters=noFilter&dateRange=yesterday&rowStart=0&pageSize=10"></webview>
+      </div>
+      <webview id="upper-right" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://messenger.klinkerapps.com/admin.html"></webview>
+      <div id="upper-middle">
+        <webview class="half-height" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#ReviewsPlace:p=xyz.klinker.messenger"></webview>
+        <webview class="half-height" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#ReviewsPlace:p=com.klinker.android.twitter_l"></webview>
+      </div>
+    </div>
+    <div id="lower-half">
+      <webview id="lower-left" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace"></webview>
+      <webview id="lower-right" partition="persist:webview" preload="./resources/js/webview-preload.js" src="http://mail.klinkerapps.com"></webview>
+    </div>
+  </body>
+
+  <script>
+    require('./resources/js/renderer.js')
+  </script>
+</html>
