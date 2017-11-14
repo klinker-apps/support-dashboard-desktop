@@ -81,6 +81,7 @@ twitter.addEventListener("dom-ready", function() {
 
 setTimeout(reloadPurchases, 1 * 60 * 1000)
 setTimeout(reloadReviews, 3 * 60 * 1000)
+setTimeout(reloadTwitter, 5 * 60 * 1000)
 
 function reloadReviews() {
     talon.reload()
