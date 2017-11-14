@@ -1,3 +1,5 @@
+var firstTime = true
+
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
 var purchases = document.getElementById('purchases')
@@ -75,29 +77,33 @@ twitter.addEventListener("dom-ready", function() {
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('SearchNavigation')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('global-nav')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementById('page-container').style.paddingTop = "0px";`))
-      twitter.focus()
+
+      if (firstTime) {
+          twitter.focus()
+          firstTime = false
+      }
     }, 1000)
 })
 
-setTimeout(reloadPurchases, 1 * 60 * 1000)
-setTimeout(reloadReviews, 3 * 60 * 1000)
-setTimeout(reloadTwitter, 5 * 60 * 1000)
+setTimeout(reloadPurchases, 3 * 60 * 1000)
+setTimeout(reloadReviews, 10 * 60 * 1000)
+setTimeout(reloadTwitter, 10 * 60 * 1000)
+
+function reloadPurchases() {
+    purchases.loadURL("https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace")
+    setTimeout(reloadPurchases, 3 * 60 * 1000)
+}
 
 function reloadReviews() {
     talon.reload()
     pulse.reload()
 
-    setTimeout(reloadReviews, 3 * 60 * 1000)
+    setTimeout(reloadReviews, 10 * 60 * 1000)
 }
 
 function reloadTwitter() {
     twitter.reload()
-    setTimeout(reloadTwitter, 5 * 60 * 1000)
-}
-
-function reloadPurchases() {
-    purchases.loadURL("https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace")
-    setTimeout(reloadPurchases, 1 * 60 * 1000)
+    setTimeout(reloadTwitter, 10 * 60 * 1000)
 }
 
 function tryCatch(code) {
