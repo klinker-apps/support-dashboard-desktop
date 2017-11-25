@@ -1,4 +1,5 @@
 var firstTime = true
+var playStorePrefix = "CRJ1NGC";
 
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
@@ -36,31 +37,31 @@ twitter.addEventListener("focus", function() {
 
 talon.addEventListener("dom-ready", function() {
     setTimeout(function() {
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-J-e')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-J-f')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-E-h MKC43RB-j-C MKC43RB-E-i MKC43RB-Jm-a')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-p-c')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-G-h MKC43RB-s-b MKC43RB-j-u')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-j-u')[2].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-J-e')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-J-f')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-E-h ` + playStorePrefix + `-j-C ` + playStorePrefix + `-E-i ` + playStorePrefix + `-Um-a')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-p-c')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-G-h ` + playStorePrefix + `-s-b ` + playStorePrefix + `-j-u')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-j-u')[2].style.display = "none";`))
     }, 5000)
 })
 
 pulse.addEventListener("dom-ready", function() {
     setTimeout(function() {
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-J-e')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-J-f')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-E-h MKC43RB-j-C MKC43RB-E-i MKC43RB-Jm-a')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-p-c')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-G-h MKC43RB-s-b MKC43RB-j-u')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-j-u')[2].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-J-e')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-J-f')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-E-h ` + playStorePrefix + `-j-C ` + playStorePrefix + `-E-i ` + playStorePrefix + `-Um-a')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-p-c')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-G-h ` + playStorePrefix + `-s-b ` + playStorePrefix + `-j-u')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-j-u')[2].style.display = "none";`))
     }, 5000)
 })
 
 purchases.addEventListener("dom-ready", function() {
     setTimeout(function() {
-      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-f-m')[0].click();`))
-      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-G-h MKC43RB-s-b MKC43RB-j-u')[0].style.display = "none";`))
-      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('MKC43RB-j-u')[2].style.display = "none";`))
+      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-f-m')[0].click();`))
+      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-G-h ` + playStorePrefix + `-s-b ` + playStorePrefix + `-j-u')[0].style.display = "none";`))
+      purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + playStorePrefix + `-j-u')[2].style.display = "none";`))
     }, 3000)
 })
 
