@@ -1,11 +1,24 @@
 var firstTime = true
-var playStorePrefix = "CRJ1NGC";
+var playStorePrefix = "HCXDKGD"; // CRJ1NGC G035G
 
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
 var purchases = document.getElementById('purchases')
 var admin = document.getElementById('pulse-admin')
 var twitter = document.getElementById('twitter-search')
+var email = document.getElementById('email')
+
+twitter.addEventListener('new-window', (event) => {
+  try {
+    require('electron').shell.openExternal(event.url)
+  } catch (error) {}
+})
+
+email.addEventListener('new-window', (event) => {
+  try {
+    require('electron').shell.openExternal(event.url)
+  } catch (error) {}
+})
 
 talon.addEventListener("focus", function() {
     talon.style.height = "52%"
