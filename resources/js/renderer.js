@@ -120,13 +120,25 @@ twitter.addEventListener("dom-ready", function() {
     }, 1000)
 })
 
-setTimeout(reloadPurchases, 3 * 60 * 1000)
+if (purchases != null) {
+  setTimeout(reloadPurchases, 3 * 60 * 1000)
+}
+
+if (financial != null) {
+  setTimeout(reloadFinancial, 3 * 60 * 1000)
+}
+
 setTimeout(reloadReviews, 10 * 60 * 1000)
 setTimeout(reloadTwitter, 10 * 60 * 1000)
 
 function reloadPurchases() {
     purchases.loadURL("https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace")
     setTimeout(reloadPurchases, 3 * 60 * 1000)
+}
+
+function reloadFinancial() {
+    purchases.loadURL("https://analytics.amplitude.com/share/d870f25b980b4ff09606bc1b63a64207")
+    setTimeout(reloadFinancial, 3 * 60 * 1000)
 }
 
 function reloadReviews() {
