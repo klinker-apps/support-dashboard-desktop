@@ -7,6 +7,11 @@
       const template = [{
           label: 'Links',
           submenu: [{
+              label: 'Financial Report',
+              click() {
+                  createWindow("https://analytics.amplitude.com/org/38878/chart/0yca5wq")
+              }
+          },{
               label: 'Play Store Console',
               click() {
                   createWindow("https://play.google.com/apps/publish/?account=6337185423976596164#AppListPlace")
