@@ -1,9 +1,10 @@
 var firstTime = true
-var playStorePrefixes = ["HCXDKGD", "JIM1JT", "CRJ1NGC", "G035G"]
+var playStorePrefixes = ["MNKEEGB", "FQXSPUC", "APEYB2C", "DSO2KAC", "HCXDKGD", "JIM1JT", "CRJ1NGC", "G035G"]
 
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
 var purchases = document.getElementById('purchases')
+var financial = document.getElementById('financial')
 var admin = document.getElementById('pulse-admin')
 var twitter = document.getElementById('twitter-search')
 var email = document.getElementById('email')
@@ -74,15 +75,29 @@ pulse.addEventListener("dom-ready", function() {
     }, 5000)
 })
 
-purchases.addEventListener("dom-ready", function() {
-    setTimeout(function() {
-      playStorePrefixes.forEach((prefix) => {
-        purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-f-m')[0].click();`))
-        purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-G-h ` + prefix + `-s-b ` + prefix + `-j-u')[0].style.display = "none";`))
-        purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-j-u')[2].style.display = "none";`))
-      })
-    }, 3000)
-})
+if (purchases != null) {
+  purchases.addEventListener("dom-ready", function() {
+      setTimeout(function() {
+        playStorePrefixes.forEach((prefix) => {
+          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-f-m')[0].click();`))
+          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-G-h ` + prefix + `-s-b ` + prefix + `-j-u')[0].style.display = "none";`))
+          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-j-u')[2].style.display = "none";`))
+        })
+      }, 3000)
+  })
+}
+
+if (financial != null) {
+  financial.addEventListener("dom-ready", function() {
+      setTimeout(function() {
+        financial.executeJavaScript(tryCatch(`document.getElementsByClassName('AnonymousHeader__fixed-container___2WZuN')[0].style.display = "none";`))
+        financial.executeJavaScript(tryCatch(`document.getElementsByClassName('StaticDashboardHeader__container___23Gpz')[0].style.display = "none";`))
+        financial.executeJavaScript(tryCatch(`document.getElementsByClassName('StaticChartHeader__container___9lODt')[0].style.display = "none";`))
+        financial.executeJavaScript(tryCatch(`document.getElementsByClassName('CoreLayout__container___31Gy2')[0].style.paddingTop = "0px";`))
+        financial.executeJavaScript(tryCatch(`document.getElementsByClassName('ShareView__chart-container___r0zdr')[0].style.marginTop = "0px";`))
+      }, 1500)
+  })
+}
 
 admin.addEventListener("dom-ready", function() {
     setTimeout(function() {
