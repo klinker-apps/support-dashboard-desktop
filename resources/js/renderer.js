@@ -137,7 +137,7 @@ function reloadPurchases() {
 }
 
 function reloadFinancial() {
-    purchases.loadURL("https://analytics.amplitude.com/share/d870f25b980b4ff09606bc1b63a64207")
+    purchases.loadURL("https://analytics.amplitude.com/org/38878/chart/0yca5wq")
     setTimeout(reloadFinancial, 3 * 60 * 1000)
 }
 
