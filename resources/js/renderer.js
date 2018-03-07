@@ -1,5 +1,5 @@
 var firstTime = true
-var playStorePrefixes = ["K36O22", "H6VDBHC", "JGIQJE", "MNKEEGB", "FQXSPUC", "APEYB2C", "DSO2KAC", "HCXDKGD", "JIM1JT", "CRJ1NGC", "G035G"]
+var playStorePrefixes = ["IF2W6TD", "K36O22", "H6VDBHC", "JGIQJE", "MNKEEGB", "FQXSPUC", "APEYB2C", "DSO2KAC", "HCXDKGD", "JIM1JT", "CRJ1NGC", "G035G"]
 
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
