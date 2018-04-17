@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rating Calculator</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    # of 5 Star: <input id="five-star" type="number"><br>
+    # of 4 Star: <input id="four-star" type="number"><br>
+    # of 3 Star: <input id="three-star" type="number"><br>
+    # of 2 Star: <input id="two-star" type="number"><br>
+    # of 1 Star: <input id="one-star" type="number"><br><br>
+
+    Number of ratings: <span id="number-ratings"></span><br>
+    Average Rating: <span id="average-rating"></span>
+  </body>
+
+  <script>
+    window.onload = function() {
+      var array = ["five-star", "four-star", "three-star", "two-star", "one-star"]
+      for (var i = 0; i < array.length; i++) {
+        document.getElementById(array[i]).addEventListener('input', function(e) {
+          computeTotal();
+          computeAverage();
+        }, false);
+      }
+    }
+
+    function computeAverage() {
+      var five = document.getElementById("five-star")
+      var four = document.getElementById("four-star")
+      var three = document.getElementById("three-star")
+      var two = document.getElementById("two-star")
+      var one = document.getElementById("one-star")
+
+      var total = number(five.value) + number(four.value) + number(three.value) + number(two.value) + number(one.value)
+      var weighted = number(five.value) * 5 + number(four.value) * 4 + number(three.value) * 3 + number(two.value) * 2 + number(one.value) * 1
+
+      document.getElementById("average-rating").innerHTML = weighted / total
+    }
+
+    function computeTotal() {
+      var five = document.getElementById("five-star")
+      var four = document.getElementById("four-star")
+      var three = document.getElementById("three-star")
+      var two = document.getElementById("two-star")
+      var one = document.getElementById("one-star")
+
+      var total = number(five.value) + number(four.value) + number(three.value) + number(two.value) + number(one.value)
+      document.getElementById("number-ratings").innerHTML = total
+    }
+
+    function number(value) {
+      var number = parseInt(value)
+      if (number !== number) {
+        return 0 // NaN
+      } else {
+        return number
+      }
+    }
+  </script>
+</html>

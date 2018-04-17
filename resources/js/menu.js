@@ -7,6 +7,11 @@
       const template = [{
           label: 'Links',
           submenu: [{
+              label: 'Ratings Calculator',
+              click() {
+                  startRatingsCalculator()
+              }
+          },{
               label: 'Financial Report',
               click() {
                   createWindow("https://analytics.amplitude.com/org/38878/chart/0yca5wq")
@@ -125,6 +130,21 @@
       })
 
       window.loadURL(link)
+    }
+
+    function startRatingsCalculator() {
+      let window = new BrowserWindow({
+        width: 240,
+        height: 220,
+        x: 400,
+        y: 400
+      })
+
+      window.loadURL(url.format({
+          pathname: path.join(__dirname, '../../ratings.html'),
+          protocol: 'file:',
+          slashes: true
+      }))
     }
 
     module.exports.buildMenu = buildMenu
