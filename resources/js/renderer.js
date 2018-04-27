@@ -1,5 +1,4 @@
 var firstTime = true
-var playStorePrefixes = ["OKLSN6D"]
 
 var talon = document.getElementById('talon-reviews')
 var pulse = document.getElementById('pulse-reviews')
@@ -51,38 +50,30 @@ twitter.addEventListener("focus", function() {
 
 talon.addEventListener("dom-ready", function() {
     setTimeout(function() {
-      playStorePrefixes.forEach((prefix) => {
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-J-e')[0].style.display = "none";`))
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-J-f')[0].style.display = "none";`))
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-E-h ` + prefix + `-j-C ` + prefix + `-E-i ` + prefix + `-Um-a')[0].style.display = "none";`))
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-p-c')[0].style.display = "none";`))
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-G-h ` + prefix + `-s-b ` + prefix + `-j-u')[0].style.display = "none";`))
-        talon.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-j-u')[2].style.display = "none";`))
-      })
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-e')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-f')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`)) // search/filtering section
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-p-c')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
     }, 5000)
 })
 
 pulse.addEventListener("dom-ready", function() {
     setTimeout(function() {
-      playStorePrefixes.forEach((prefix) => {
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-J-e')[0].style.display = "none";`))
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-J-f')[0].style.display = "none";`))
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-E-h ` + prefix + `-j-C ` + prefix + `-E-i ` + prefix + `-Um-a')[0].style.display = "none";`))
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-p-c')[0].style.display = "none";`))
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-G-h ` + prefix + `-s-b ` + prefix + `-j-u')[0].style.display = "none";`))
-        pulse.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-j-u')[2].style.display = "none";`))
-      })
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-e')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-f')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`)) // search/filtering section
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-p-c')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
     }, 5000)
 })
 
 if (purchases != null) {
   purchases.addEventListener("dom-ready", function() {
       setTimeout(function() {
-        playStorePrefixes.forEach((prefix) => {
-          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-f-m')[0].click();`))
-          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-G-h ` + prefix + `-s-b ` + prefix + `-j-u')[0].style.display = "none";`))
-          purchases.executeJavaScript(tryCatch(`document.getElementsByClassName('` + prefix + `-j-u')[2].style.display = "none";`))
-        })
+        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-f-m')[0].click();`))
+        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-u')[0].style.display = "none";`))
+        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
       }, 3000)
   })
 }
@@ -155,4 +146,8 @@ function reloadTwitter() {
 
 function tryCatch(code) {
   return "try { " + code + " } catch (err) { }"
+}
+
+function definePlayStorePrefixItem() {
+  return `var item = document.querySelectorAll('[role="status"]')[0].className; item = item.substring(0, item.indexOf("-"));`
 }
