@@ -20,18 +20,34 @@ email.addEventListener('new-window', (event) => {
   } catch (error) {}
 })
 
-talon.addEventListener("focus", function() {
-    talon.style.height = "52%"
-    pulse.style.height = "16%"
-    admin.style.height = "16%"
-    twitter.style.height = "16%"
-})
-
 pulse.addEventListener("focus", function() {
     pulse.style.height = "52%"
     talon.style.height = "16%"
     admin.style.height = "16%"
     twitter.style.height = "16%"
+
+    // show Pulse app bar
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "flex";`))
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "block";`))
+
+    // hide Talon app bar
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
+})
+
+talon.addEventListener("focus", function() {
+    talon.style.height = "52%"
+    pulse.style.height = "16%"
+    admin.style.height = "16%"
+    twitter.style.height = "16%"
+
+    // hide Pulse app bar
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
+
+    // show Talon app bar
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "flex";`))
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "block";`))
 })
 
 admin.addEventListener("focus", function() {
@@ -39,6 +55,14 @@ admin.addEventListener("focus", function() {
     talon.style.height = "16%"
     pulse.style.height = "16%"
     twitter.style.height = "16%"
+
+    // hide Pulse app bar
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
+
+    // hide Talon app bar
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
 })
 
 twitter.addEventListener("focus", function() {
@@ -46,34 +70,62 @@ twitter.addEventListener("focus", function() {
     talon.style.height = "16%"
     pulse.style.height = "16%"
     admin.style.height = "16%"
-})
 
-talon.addEventListener("dom-ready", function() {
-    setTimeout(function() {
-      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-e')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-f')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`)) // search/filtering section
-      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-p-c')[0].style.display = "none";`))
-      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
-    }, 5000)
+    // hide Pulse app bar
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
+
+    // hide Talon app bar
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+    talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
 })
 
 pulse.addEventListener("dom-ready", function() {
     setTimeout(function() {
       pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-e')[0].style.display = "none";`))
       pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-f')[0].style.display = "none";`))
-      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`)) // search/filtering section
+
+      // search/filtering section
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`))
       pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-p-c')[0].style.display = "none";`))
       pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
+
+      // app bar
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+      pulse.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
+
+      if (firstTime) {
+          pulse.focus()
+          firstTime = false
+      }
+    }, 5000)
+})
+
+talon.addEventListener("dom-ready", function() {
+    setTimeout(function() {
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-e')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-J-f')[0].style.display = "none";`))
+
+      // search/filtering section
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.querySelectorAll('[role="article"]')[2].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-p-c')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
+
+      // app bar
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+      talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
     }, 5000)
 })
 
 if (purchases != null) {
   purchases.addEventListener("dom-ready", function() {
       setTimeout(function() {
+        // close the drawer
         purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-f-m')[0].click();`))
-        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-u')[0].style.display = "none";`))
-        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-u')[2].style.display = "none";`))
+
+        // app bar
+        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
+        purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
       }, 3000)
   })
 }
@@ -103,11 +155,6 @@ twitter.addEventListener("dom-ready", function() {
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('SearchNavigation')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('global-nav')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementById('page-container').style.paddingTop = "0px";`))
-
-      if (firstTime) {
-          twitter.focus()
-          firstTime = false
-      }
     }, 1000)
 })
 
