@@ -15,9 +15,6 @@ var shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
   }
 
   windowProvider.getWindow().show()
-  setTimeout(() => {
-    windowProvider.getBrowserView().webContents.executeJavaScript("try { reloadUpdatedConversations() } catch (err) { }")
-  }, 1000)
 })
 
 if (shouldQuit) {
