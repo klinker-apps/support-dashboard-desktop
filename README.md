@@ -24,4 +24,6 @@ To package the apps for each platform:
 ```
 $ yarn install
 $ sudo ./node_modules/.bin/electron-builder build --mac dmg
+$ sudo ./node_modules/.bin/electron-builder build --linux deb
+$ sudo ./node_modules/.bin/electron-builder build --windows nsis
 ```

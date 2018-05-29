@@ -97,7 +97,7 @@ pulse.addEventListener("dom-ready", function() {
           pulse.focus()
           firstTime = false
       }
-    }, 5000)
+    }, 7000)
 })
 
 talon.addEventListener("dom-ready", function() {
@@ -113,7 +113,7 @@ talon.addEventListener("dom-ready", function() {
       // app bar
       talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
       talon.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
-    }, 5000)
+    }, 7000)
 })
 
 if (purchases != null) {
@@ -125,7 +125,7 @@ if (purchases != null) {
         // app bar
         purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
         purchases.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
-      }, 3000)
+      }, 5000)
   })
 }
 
@@ -145,7 +145,7 @@ admin.addEventListener("dom-ready", function() {
     setTimeout(function() {
       admin.executeJavaScript(tryCatch(`document.getElementsByClassName('mdl-layout__header is-casting-shadow')[0].style.display = "none";`))
       admin.executeJavaScript(tryCatch(`document.getElementById('admin-list').style.paddingTop = "0px";`))
-    }, 1500)
+    }, 3000)
 })
 
 twitter.addEventListener("dom-ready", function() {
@@ -154,7 +154,7 @@ twitter.addEventListener("dom-ready", function() {
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('SearchNavigation')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementsByClassName('global-nav')[0].style.display = "none";`))
       twitter.executeJavaScript(tryCatch(`document.getElementById('page-container').style.paddingTop = "0px";`))
-    }, 1000)
+    }, 3000)
 })
 
 if (purchases != null) {
