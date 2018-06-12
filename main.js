@@ -68,5 +68,12 @@ function createWindow() {
     windowProvider.setWindow(mainWindow)
     mainWindowState.manage(mainWindow)
     menu.buildMenu(mainWindow)
+  } else {
+    if (process.platform === 'darwin') {
+      app.dock.show()
+    }
+
+    windowProvider.getWindow().show()
+    menu.buildMenu(windowProvider.getWindow())
   }
 }
