@@ -60,7 +60,7 @@ if (pulseReviews != null) {
       // app bar
       pulseReviews.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
       pulseReviews.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
-    }, 5000)
+    }, 7000)
   })
 }
 
@@ -87,7 +87,7 @@ if (talonReviews != null) {
       // app bar
       talonReviews.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-G-h ' + item + '-s-b ' + item + '-j-v')[0].style.display = "none";`))
       talonReviews.executeJavaScript(tryCatch(definePlayStorePrefixItem() + `document.getElementsByClassName(item + '-j-v')[2].style.display = "none";`))
-    }, 5000)
+    }, 7000)
   })
 }
 

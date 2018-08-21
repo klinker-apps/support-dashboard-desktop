@@ -12,11 +12,26 @@
           margin: 0;
       }
 
+      .nav-item {
+          margin-left: 15px;
+          margin-right: 15px;
+          max-width: 40px;
+          max-height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          margin-bottom: 12px;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+      }
+
       #sidebar {
-          background: #F5F5F5;
+          background: #21252C;
           float: left;
           width: 70px;
           height: 100%;
+          padding-top: 36px;
       }
 
       #content {
@@ -66,7 +81,14 @@
     </style>
   </head>
   <body>
-    <div id="sidebar"></div>
+    <div id="sidebar">
+      <img id="nav-inbox" class="nav-item" src="resources/images/inbox.png" alt="Email">
+      <img id="nav-pulse" class="nav-item" src="resources/images/pulse.png" alt="Pulse">
+      <img id="nav-talon" class="nav-item" src="resources/images/talon.png" alt="Talon">
+      <img id="nav-purchase" class="nav-item" src="resources/images/purchases.png" alt="Purchases">
+      <img id="nav-github" class="nav-item" src="resources/images/github.png" alt="GitHub">
+      <img id="nav-twitter" class="nav-item" src="resources/images/twitter.png" alt="Twitter">
+    </div>
     <div id="content"></div>
   </body>
 
