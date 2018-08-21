@@ -47,7 +47,8 @@ function createWindow() {
         'x': mainWindowState.x,
         'y': mainWindowState.y,
         'width': mainWindowState.width,
-        'height': mainWindowState.height
+        'height': mainWindowState.height,
+        'titleBarStyle': 'hidden'
     })
 
     mainWindow.loadURL(url.format({
