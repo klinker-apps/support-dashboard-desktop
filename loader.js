@@ -1,4 +1,7 @@
 const fs = require('fs')
+const path = require('path')
+const renderer = require('./renderer.js')
+
 var current = null
 
 var openPage = (pageName = "inbox") => {
@@ -8,9 +11,14 @@ var openPage = (pageName = "inbox") => {
 
   current = pageName
 
-  fs.readFile('pages/' + pageName + '.html', (err, data) => {
+  fs.readFile(path.join(__dirname, 'pages/' + pageName + '.html'), (err, data) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+
     document.getElementById('content').innerHTML = data
-    require('./renderer.js')
+    renderer.initPage()
   })
 }
 
