@@ -12,58 +12,87 @@
           margin: 0;
       }
 
+      .nav-item {
+          margin-left: 15px;
+          margin-right: 15px;
+          max-width: 40px;
+          max-height: 40px;
+          min-width: 40px;
+          min-height: 40px;
+          margin-bottom: 12px;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+      }
+
+      #sidebar {
+          background: #21252C;
+          float: left;
+          width: 70px;
+          height: 100%;
+          padding-top: 36px;
+      }
+
+      #content {
+          float: right;
+          width: calc(100% - 70px);
+          height: 100%;
+      }
+
       webview {
+          width: 100%;
           margin: 0 auto;
           overflow-x: hidden;
           overflow-y: hidden;
       }
 
+
+      #full {
+          float: left;
+          width: 100%;
+          height: 100%;
+      }
+
       #left {
           float: left;
-          width: 40%;
+          width: 50%;
           height: 100%;
       }
 
       #right {
           float: right;
-          width: 60%;
+          width: 50%;
           height: 100%;
       }
 
-      #left > webview {
+      .height-quarter {
           height: 25%;
-          width: 100%
       }
 
-      #right > webview {
-          width: 100%;
+      .height-half {
+          height: 50%;
       }
 
-      #financial, #purchases {
-          height: 40%;
-      }
-
-      #email {
-          height: 60%;
+      .height-full {
+          height: 100%;
       }
 
     </style>
   </head>
   <body>
-    <div id="left">
-      <webview id="pulse-reviews" partition="persist:webview1" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#ReviewsPlace:p=xyz.klinker.messenger"></webview>
-      <webview id="talon-reviews" partition="persist:webview1" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#ReviewsPlace:p=com.klinker.android.twitter_l"></webview>
-      <webview id="pulse-admin" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://messenger.klinkerapps.com/admin.html"></webview>
-      <webview id="twitter-search" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://twitter.com/search?f=tweets&q=%40KlinkerApps%20OR%20%40TalonAndroid%20OR%20%40lukeklinker"></webview>
+    <div id="sidebar">
+      <img id="nav-inbox" class="nav-item" src="resources/images/inbox.png" alt="Email">
+      <img id="nav-pulse" class="nav-item" src="resources/images/pulse.png" alt="Pulse">
+      <img id="nav-talon" class="nav-item" src="resources/images/talon.png" alt="Talon">
+      <img id="nav-purchase" class="nav-item" src="resources/images/purchases.png" alt="Purchases">
+      <img id="nav-github" class="nav-item" src="resources/images/github.png" alt="GitHub">
+      <img id="nav-twitter" class="nav-item" src="resources/images/twitter.png" alt="Twitter">
     </div>
-    <div id="right">
-      <webview id="purchases" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace"></webview>
-      <!-- <webview id="financial" partition="persist:webview" preload="./resources/js/webview-preload.js" src="https://analytics.amplitude.com/org/38878/chart/0yca5wq"></webview> -->
-      <webview id="email" partition="persist:emailwebview" preload="./resources/js/webview-preload.js" src="http://inbox.google.com"></webview>
-    <div>
+    <div id="content"></div>
   </body>
 
   <script>
-    require('./resources/js/renderer.js')
+    require('./loader.js')
   </script>
 </html>

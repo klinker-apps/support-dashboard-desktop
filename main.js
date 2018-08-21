@@ -39,21 +39,22 @@ app.on('before-quit', () => {
 function createWindow() {
   if (windowProvider.getWindow() == null) {
     let mainWindowState = windowStateKeeper({
-        defaultWidth: 1000,
-        defaultHeight: 750
+      defaultWidth: 1000,
+      defaultHeight: 750
     })
 
     var mainWindow = new BrowserWindow({
-        'x': mainWindowState.x,
-        'y': mainWindowState.y,
-        'width': mainWindowState.width,
-        'height': mainWindowState.height
+      'x': mainWindowState.x,
+      'y': mainWindowState.y,
+      'width': mainWindowState.width,
+      'height': mainWindowState.height,
+      'titleBarStyle': 'hidden'
     })
 
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: 'file:',
-        slashes: true
+      pathname: path.join(__dirname, 'index.html'),
+      protocol: 'file:',
+      slashes: true
     }))
 
     mainWindow.on('close', function(event) {
@@ -62,7 +63,7 @@ function createWindow() {
     })
 
     mainWindow.on('closed', function(event) {
-        windowProvider.setWindow(null)
+      windowProvider.setWindow(null)
     })
 
     windowProvider.setWindow(mainWindow)

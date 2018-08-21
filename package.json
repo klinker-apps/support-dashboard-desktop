@@ -1,6 +1,6 @@
 {
    "name": "klinker-apps",
-   "version": "v1.0.0",
+   "version": "v2.0.0",
    "description": "A dashboard application for Klinker Apps",
    "main": "main.js",
    "scripts": {
@@ -38,8 +38,8 @@
       ]
    },
    "devDependencies": {
-      "electron": "2.0.3",
-      "electron-builder": "20.15.1"
+      "electron": "2.0.7",
+      "electron-builder": "20.26.0"
    },
    "dependencies": {
       "electron-window-state": "4.1.1",

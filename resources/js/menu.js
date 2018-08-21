@@ -12,34 +12,14 @@
                   startRatingsCalculator()
               }
           },{
-              label: 'Financial Report',
+              label: 'Pulse Admin',
               click() {
-                  createWindow("https://analytics.amplitude.com/org/38878/chart/0yca5wq")
+                  createWindow("https://messenger.klinkerapps.com/admin.html")
               }
           },{
-              label: 'Play Store Console',
+              label: 'Purchase History',
               click() {
-                  createWindow("https://play.google.com/apps/publish/?account=6337185423976596164#AppListPlace")
-              }
-          }, {
-              label: 'Firebase Console',
-              click() {
-                  createWindow("https://console.firebase.google.com")
-              }
-          }, {
-              label: 'Google Payments',
-              click() {
-                  createWindow("https://payments.google.com/payments/u/0/home?bcn=794839672874#subscriptionsAndServices")
-              }
-          }, {
-              label: 'Pulse Help',
-              click() {
-                  createWindow("https://messenger.klinkerapps.com/help")
-              }
-          }, {
-              label: 'Pulse Overview',
-              click() {
-                  createWindow("https://messenger.klinkerapps.com/overview")
+                  createWindow("https://play.google.com/apps/publish/?account=6337185423976596164#OrderManagementPlace")
               }
           }]
       }, {
