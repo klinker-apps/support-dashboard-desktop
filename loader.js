@@ -25,18 +25,18 @@ var openPage = (pageName = "inbox") => {
 // default to email page.
 openPage("inbox")
 
-var inbox = document.getElementById('nav-inbox')
-var pulse = document.getElementById('nav-pulse')
-var talon = document.getElementById('nav-talon')
-var purchase = document.getElementById('nav-purchase')
-var slack = document.getElementById('nav-slack')
-var github = document.getElementById('nav-github')
-var twitter = document.getElementById('nav-twitter')
+let navString = ""
+let navLinks = [
+  'inbox', 'slack', 'pulse', 'talon', 'purchase', 'github', 'twitter'
+]
 
-inbox.addEventListener("click", () => { openPage("inbox") })
-pulse.addEventListener("click", () => { openPage("pulse") })
-talon.addEventListener("click", () => { openPage("talon") })
-purchase.addEventListener("click", () => { openPage("purchases") })
-slack.addEventListener("click", () => { openPage("slack") })
-github.addEventListener("click", () => { openPage("github") })
-twitter.addEventListener("click", () => { openPage("twitter") })
+for (let i = 0; i < navLinks.length; i++) {
+  navString += '<img id="nav-' + navLinks[i] + '" class="nav-item" src="resources/images/' + navLinks[i] + '.png">'
+}
+
+document.getElementById('sidebar').innerHTML = navString
+
+for (let i = 0; i < navLinks.length; i++) {
+  let element = document.getElementById('nav-' + navLinks[i])
+  element.addEventListener("click", () => { openPage(navLinks[i]) })
+}
