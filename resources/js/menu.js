@@ -12,6 +12,11 @@
                   startRatingsCalculator()
               }
           },{
+              label: 'Google Translate',
+              click() {
+                  createWindow("https://translate.google.com")
+              }
+          },{
               label: 'Pulse Admin',
               click() {
                   createWindow("https://messenger.klinkerapps.com/admin.html")

@@ -12,6 +12,7 @@
       var purchases = document.getElementById('purchases')
       var financial = document.getElementById('financial')
 
+      var slack = document.getElementById('slack')
       var github = document.getElementById('github-notifications')
       var twitter = document.getElementById('twitter-search')
 
@@ -185,6 +186,10 @@
 
         if (github != null) {
           github.loadURL("https://github.com/notifications")
+        }
+
+        if (slack != null) {
+          slack.loadURL("https://klinkerapps.slack.com")
         }
 
         setTimeout(reloadNotifications, 10 * 60 * 1000)
