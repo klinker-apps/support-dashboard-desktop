@@ -104,9 +104,9 @@
         })
       }
 
-      setTimeout(reloadPurchases, 3 * 60 * 1000)
-      setTimeout(reloadApps, 10 * 60 * 1000)
-      setTimeout(reloadNotifications, 10 * 60 * 1000)
+      // setTimeout(reloadPurchases, 3 * 60 * 1000)
+      // setTimeout(reloadApps, 10 * 60 * 1000)
+      // setTimeout(reloadNotifications, 10 * 60 * 1000)
 
       function reloadPurchases() {
         if (purchases != null) {
