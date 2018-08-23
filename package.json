@@ -25,6 +25,7 @@
       "appId": "xyz.klinker.dashboard",
       "productName": "Klinker Apps Dashboard",
       "artifactName": "klinker-apps-${version}-${arch}.${ext}",
+      "forceCodeSigning": false,
       "mac": {
          "category": "public.app-category.utilities"
       },
