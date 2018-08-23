@@ -66,6 +66,9 @@ function createWindow() {
       windowProvider.setWindow(null)
     })
 
+    mainWindow.setMenuBarVisibility(false)
+    mainWindow.setAutoHideMenuBar(true)
+
     windowProvider.setWindow(mainWindow)
     mainWindowState.manage(mainWindow)
     menu.buildMenu(mainWindow)

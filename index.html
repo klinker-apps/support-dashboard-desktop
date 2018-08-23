@@ -26,6 +26,12 @@
         cursor: pointer;
       }
 
+      #titlebar {
+          position: relative;
+          -webkit-app-region: drag;
+          height: 24px;
+      }
+
       #sidebar {
           background: #21252C;
           float: left;
@@ -83,6 +89,7 @@
   <body>
     <div id="sidebar"></div>
     <div id="content"></div>
+    <div id="titlebar"></div>
   </body>
 
   <script>
