@@ -27,7 +27,7 @@ openPage("inbox")
 
 let navString = ""
 let navLinks = [
-  'inbox', 'pulse', 'talon', 'purchase', 'slack', 'github', 'twitter', 'google-plus', 'cloud-consoles'
+  'inbox', 'pulse', 'talon', 'purchase', 'slack', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
 ]
 
 for (let i = 0; i < navLinks.length; i++) {
