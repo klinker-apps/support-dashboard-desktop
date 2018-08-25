@@ -17,7 +17,7 @@
       var twitter = document.getElementById('twitter-search')
       var googlePlus = document.getElementById('google-plus')
 
-      let openNewWindow = [ twitter, github, slack, googlePlus, email ]
+      let openNewWindow = [ github, slack, googlePlus, email ]
       for (let i = 0; i < openNewWindow.length; i++) {
         if (openNewWindow[i] != null) {
           openNewWindow[i].addEventListener('new-window', (event) => {
