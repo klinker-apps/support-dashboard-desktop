@@ -4,7 +4,7 @@ const renderer = require('./renderer.js')
 
 var current = null
 
-var openPage = (pageName = "inbox") => {
+var openPage = (pageName = "gmail") => {
   if (pageName == current) {
     return
   }
@@ -23,11 +23,11 @@ var openPage = (pageName = "inbox") => {
 }
 
 // default to email page.
-openPage("inbox")
+openPage("gmail")
 
 let navString = ""
 let navLinks = [
-  'inbox', 'pulse', 'talon', 'purchase', 'slack', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
+  'gmail', 'pulse', 'talon', 'purchase', 'slack', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
 ]
 
 for (let i = 0; i < navLinks.length; i++) {
