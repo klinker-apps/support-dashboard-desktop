@@ -15,7 +15,7 @@
     rimraf "^2.4.0"
     underscore "^1.6.0"
 
-"@paulcbetts/spellchecker@^4.0.6":
+"@paulcbetts/spellchecker@^4.0.5":
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/@paulcbetts/spellchecker/-/spellchecker-4.0.6.tgz#79ef1f9c19c5a3156921ccaa9ffdc3efbbee47e3"
   dependencies:
@@ -569,12 +569,12 @@ electron-remote@^1.1.1:
     rxjs "^5.0.0-beta.12"
     xmlhttprequest "^1.8.0"
 
-electron-spellchecker@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/electron-spellchecker/-/electron-spellchecker-1.1.2.tgz#5fbe1e65d246b77e6e7433ee2387d9d26010f7a8"
+electron-spellchecker@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/electron-spellchecker/-/electron-spellchecker-1.1.1.tgz#dae0a56113d4880b9e95de624cf8181bbb07d4c8"
   dependencies:
     "@paulcbetts/cld" "^2.4.6"
-    "@paulcbetts/spellchecker" "^4.0.6"
+    "@paulcbetts/spellchecker" "^4.0.5"
     bcp47 "^1.1.2"
     debug "^2.6.3"
     electron-remote "^1.1.1"
@@ -594,9 +594,9 @@ electron-window-state@4.1.1:
     jsonfile "^2.2.3"
     mkdirp "^0.5.1"
 
-electron@2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-2.0.11.tgz#8e352a83ec607471e82d323a2adc7e7b53698e79"
+electron@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-2.0.9.tgz#dfc863d653fa3a2dd4fea0c63303df9c0e33c602"
   dependencies:
     "@types/node" "^8.0.24"
     electron-download "^3.0.1"
