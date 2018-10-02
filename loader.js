@@ -27,7 +27,7 @@ openPage("gmail")
 
 let navString = ""
 let navLinks = [
-  'gmail', 'pulse', 'talon', 'purchase', 'slack', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
+  'gmail', 'slack', 'pulse', 'talon', 'purchase', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
 ]
 
 for (let i = 0; i < navLinks.length; i++) {
