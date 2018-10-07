@@ -1,15 +1,16 @@
 const electron = require('electron')
 const app = electron.app
-const BrowserWindow = electron.BrowserWindow
-const windowStateKeeper = require('electron-window-state')
 
-const path = require('path')
-const url = require('url')
+const gotLock = app.requestSingleInstanceLock()
+
+if (!gotLock) {
+  app.exit(0)
+  return;
+}
 
 const windowProvider = require('./resources/js/window-provider.js')
 const menu = require('./resources/js/menu.js')
 
-app.requestSingleInstanceLock()
 app.on('second-instance', () => {
   windowProvider.getWindow().show()
 })

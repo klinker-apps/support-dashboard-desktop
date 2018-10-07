@@ -30,14 +30,7 @@
 
       window.on('close', function(event) {
         event.preventDefault()
-
-        if (process.platform === 'darwin') {
-          window.hide()
-        } else {
-          // there is a super weird bug where Electron opens a blank window, when a hidden window is restored.
-          // I don't know why.. Happens on Windows and Linux.
-          window.minimize()
-        }
+        window.hide()
       })
 
       window.on('closed', function(event) {
