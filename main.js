@@ -9,18 +9,14 @@ const url = require('url')
 const windowProvider = require('./resources/js/window-provider.js')
 const menu = require('./resources/js/menu.js')
 
-var shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
+app.requestSingleInstanceLock()
+app.on('second-instance', () => {
   if (windowProvider == null) {
     initialize()
   }
 
   windowProvider.getWindow().show()
 })
-
-if (shouldQuit) {
-  app.quit()
-  return
-}
 
 app.setAppUserModelId("xyz.klinker.support")
 app.on('ready', createWindow)
