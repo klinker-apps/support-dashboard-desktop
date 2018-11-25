@@ -1,3 +1,6 @@
+// This just cleans up some of the webpages, to make them look nicer when
+// they are not full screen.
+
 (function() {
   var initPage = function() {
       var email = document.getElementById('email')
@@ -106,6 +109,7 @@
         })
       }
 
+      // These could have auto refreshed the web pages, but I have turned that off.
       // setTimeout(reloadPurchases, 3 * 60 * 1000)
       // setTimeout(reloadApps, 10 * 60 * 1000)
       // setTimeout(reloadNotifications, 10 * 60 * 1000)
