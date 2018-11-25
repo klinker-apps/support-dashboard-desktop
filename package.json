@@ -40,7 +40,7 @@
    },
    "devDependencies": {
     "electron": "4.0.0-beta.7",
-    "electron-builder": "20.33.2"
+    "electron-builder": "20.36.2"
    },
    "dependencies": {
       "electron-window-state": "5.0.1"
