@@ -25,6 +25,7 @@ var openPage = (pageName = "gmail") => {
 // default to email page.
 openPage("gmail")
 
+// this defines the icons on the left and their order
 let navString = ""
 let navLinks = [
   'gmail', 'slack', 'pulse', 'talon', 'purchase', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
