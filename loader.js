@@ -28,7 +28,7 @@ openPage("gmail")
 // this defines the icons on the left and their order
 let navString = ""
 let navLinks = [
-  'gmail', 'slack', 'pulse', 'talon', 'purchase', 'github', 'twitter', 'google-plus', 'cloud-consoles', 'jenkins'
+  'gmail', 'slack', 'pulse', 'talon', 'purchase', 'github', 'twitter', 'cloud-consoles', 'jenkins'
 ]
 
 for (let i = 0; i < navLinks.length; i++) {
