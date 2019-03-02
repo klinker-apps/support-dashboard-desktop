@@ -8,7 +8,7 @@ These are the sites and services that I watch throughout the day. If you are a s
 * **Slack** - I have created different bots to notify me of reviews, purchases, daily summaries, GitHub interactions, etc
 * **Pulse** - 3 pages: reviews, Firebase analytics, and the admin dashboard for the web app
 * **Talon** - 2 pages: reviews and Firebase analytics
-* **Purhases** - 2 pages: Play Store orders and Google Pay
+* **Purchases** - 2 pages: Play Store orders and Google Pay
 * **GitHub Notifications**
 * **Twitter** - a search for "@KlinkerApps @lukeklinker @TalonAndroid"
 * **Google+ Notifications**
