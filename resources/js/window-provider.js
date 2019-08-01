@@ -19,7 +19,11 @@
         'y': mainWindowState.y,
         'width': mainWindowState.width,
         'height': mainWindowState.height,
-        'titleBarStyle': 'hidden'
+        'titleBarStyle': 'hidden',
+        webPreferences: {
+          nodeIntegration: true,
+          webviewTag: true
+        }
       })
 
       window.loadURL(url.format({
