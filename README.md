@@ -26,19 +26,19 @@ To build and run the apps locally:
 npm i -g electron
 
 // prepare the installation
-$ yarn install
+$ yarn
 
 // run the app
-$ npm start
+$ yarn start
 ```
 
 To package the apps for each platform:
 
 ```
-$ yarn install
-$ sudo ./node_modules/.bin/electron-builder build --mac dmg
-$ sudo ./node_modules/.bin/electron-builder build --linux deb
-$ sudo ./node_modules/.bin/electron-builder build --windows nsis
+$ yarn
+$ yarn run build-mac
+$ yarn run build-linux
+$ yarn run build-windows
 ```
 
 ## Customizing the App
