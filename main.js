@@ -32,7 +32,7 @@ app.on('before-quit', () => {
 function createWindow() {
   if (windowProvider.getWindow() == null) {
     let window = windowProvider.createMainWindow()
-    menu.buildMenu(window)
+    menu.buildMenu(windowProvider)
   } else {
     if (process.platform === 'darwin') {
       app.dock.show()
@@ -40,6 +40,6 @@ function createWindow() {
 
     let window = windowProvider.getWindow()
     window.show()
-    menu.buildMenu(window)
+    menu.buildMenu(windowProvider)
   }
 }

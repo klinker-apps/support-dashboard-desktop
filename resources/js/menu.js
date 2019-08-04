@@ -3,7 +3,7 @@
     const path = require('path')
     const url = require('url')
 
-    var buildMenu = function(mainWindow) {
+    var buildMenu = function(windowProvider) {
       const template = [{
           label: 'Links',
           submenu: [{
