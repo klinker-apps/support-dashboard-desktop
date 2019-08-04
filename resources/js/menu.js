@@ -102,8 +102,8 @@
         })
     } else {
       // Windows menu
-      template[3].submenu.push({ type: "separator" });
-      template[3].submenu.push({
+      template[2].submenu.push({ type: "separator" });
+      template[2].submenu.push({
         accelerator: "Alt+M",
         click: () => {
           const win = windowProvider.getWindow();
