@@ -41,8 +41,8 @@
         event.preventDefault()
       })
 
-      window.setMenuBarVisibility(false)
       window.setAutoHideMenuBar(true)
+      window.setMenuBarVisibility(false)
 
       setWindow(window)
       mainWindowState.manage(window)

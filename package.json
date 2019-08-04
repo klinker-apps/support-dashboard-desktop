@@ -1,6 +1,6 @@
 {
    "name": "klinker-apps",
-   "version": "v3.0.0",
+   "version": "v3.0.1",
    "description": "A dashboard application for Klinker Apps",
    "main": "main.js",
    "scripts": {

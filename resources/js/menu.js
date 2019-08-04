@@ -78,59 +78,73 @@
     },]
 
 
-      if (process.platform === 'darwin') {
-          const name = require('electron').app.getName()
-          template.unshift({
-              label: name,
-              submenu: [{
-                  role: 'about'
-              }, {
-                  type: 'separator'
-              }, {
-                  label: 'Hide Dashboard',
-                  role: 'hide'
-              }, {
-                  role: 'hideothers'
-              }, {
-                  role: 'unhide'
-              }, {
-                  type: 'separator'
-              }, {
-                  label: 'Quit Dashboard',
-                  role: 'quit'
-              }]
-          })
-      }
+    if (process.platform === 'darwin') {
+        const name = require('electron').app.getName()
+        template.unshift({
+            label: name,
+            submenu: [{
+                role: 'about'
+            }, {
+                type: 'separator'
+            }, {
+                label: 'Hide Dashboard',
+                role: 'hide'
+            }, {
+                role: 'hideothers'
+            }, {
+                role: 'unhide'
+            }, {
+                type: 'separator'
+            }, {
+                label: 'Quit Dashboard',
+                role: 'quit'
+            }]
+        })
+    } else {
+      // Windows menu
+      template[3].submenu.push({ type: "separator" });
+      template[3].submenu.push({
+        accelerator: "Alt+M",
+        click: () => {
+          const win = windowProvider.getWindow();
+          const menuVisible = win.isMenuBarVisible();
 
-      const menu = Menu.buildFromTemplate(template)
-      Menu.setApplicationMenu(menu)
+          win.setAutoHideMenuBar(menuVisible);
+          win.setMenuBarVisibility(!menuVisible);
+        },
+        label: "Toggle Menu Bar Visibility",
+      });
     }
 
-    function createWindow(link) {
-      let window = new BrowserWindow({
-        width: 410,
-        height: 650,
-        x: 0,
-        y: 0
-      })
+    const menu = Menu.buildFromTemplate(template)
+    Menu.setApplicationMenu(menu)
+  }
 
-      window.loadURL(link)
-    }
+  function createWindow(link) {
+    let window = new BrowserWindow({
+      width: 410,
+      height: 650,
+      x: 0,
+      y: 0
+    })
 
-    function startRatingsCalculator() {
-      let window = new BrowserWindow({
-        width: 240,
-        height: 220,
-        x: 400,
-        y: 400
-      })
+    window.loadURL(link)
+  }
 
-      window.loadURL(url.format({
-          pathname: path.join(__dirname, '../../ratings.html'),
-          protocol: 'file:',
-          slashes: true
-      }))
-    }
+  function startRatingsCalculator() {
+    let window = new BrowserWindow({
+      width: 240,
+      height: 220,
+      x: 400,
+      y: 400
+    })
 
-    module.exports.buildMenu = buildMenu
+    window.loadURL(url.format({
+        pathname: path.join(__dirname, '../../ratings.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+  }
+
+  module.exports.buildMenu = buildMenu
 }());
