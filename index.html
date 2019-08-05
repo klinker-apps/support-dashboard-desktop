@@ -10,6 +10,7 @@
           background: #EEEEEE;
           padding: 0;
           margin: 0;
+          overflow-y: hidden;
       }
 
       #titlebar {
@@ -53,7 +54,6 @@
           overflow-y: hidden;
       }
 
-
       #full {
           float: left;
           width: 100%;
@@ -70,6 +70,31 @@
           float: right;
           width: 50%;
           height: 100%;
+      }
+
+      #templates-overlay {
+          float: left;
+          position: absolute;
+          height: 800px;
+          width: 35%;
+          bottom: 50px;
+          left: 120px;
+          box-shadow: 3px 3px 5px grey;
+          display: none;
+      }
+
+      #templates-button {
+          float: left;
+          position: absolute;
+          bottom: 0px;
+          left: 70px;
+          width: 56px;
+          height: 56px;
+          cursor: pointer;
+      }
+
+      #templates-webview {
+          min-height: 800px;
       }
 
       .height-quarter {

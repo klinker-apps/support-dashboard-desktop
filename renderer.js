@@ -20,6 +20,35 @@
       var twitter = document.getElementById('twitter-search')
       var googlePlus = document.getElementById('google-plus')
 
+      var templatesButton = document.getElementById('templates-button')
+      var templatesContainer = document.getElementById('templates-overlay')
+      var templatesWebView = document.getElementById('templates-webview')
+
+      if (templatesButton && templatesContainer && templatesWebView) {
+        templatesButton.addEventListener('click', function() {
+          var currentState = templatesContainer.style.display;
+          if (currentState == 'block') {
+            templatesContainer.style.display = 'none';
+          } else {
+            templatesContainer.style.display = 'block';
+            templatesWebView.focus()
+          }
+        });
+
+        templatesWebView.addEventListener('blur', function() {
+          var currentState = templatesContainer.style.display;
+          if (currentState != 'none') {
+            templatesContainer.style.display = 'none';
+          }
+        });
+
+        templatesWebView.addEventListener("dom-ready", function() {
+          templatesWebView.executeJavaScript(tryCatch(`document.getElementsByClassName('Header')[0].style.display = "none";`))
+          templatesWebView.executeJavaScript(tryCatch(`document.getElementsByClassName('footer')[0].style.display = "none";`))
+          templatesWebView.executeJavaScript(tryCatch(`document.getElementsByClassName('pagehead')[0].style.display = "none";`))
+        });
+      }
+
       let openNewWindow = [ twitter, github, slack, googlePlus, email ]
       for (let i = 0; i < openNewWindow.length; i++) {
         if (openNewWindow[i] != null) {
