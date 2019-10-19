@@ -41,6 +41,23 @@ $ yarn run build-linux
 $ yarn run build-windows
 ```
 
+### Notes on Building for Mac
+
+With MacOS Catalina (`10.14.5`), Apple requires DMG files to be notarized by the distributer. The files that I distribute are all signed and notarized by me.
+
+If you are looking to develop the app yourself, you can debug and run the app through `yarn start` without issue. However, if you want to make a signed executable (`yarn build-mac`), you will need to set up your Apple ID and password for the notarization process.
+
+To do this, you will first need a valid Apple developer account. You can sign up at https://developer.apple.com. You will need to use Xcode to [export your new developer signing information](https://help.apple.com/xcode/mac/current/#/dev154b28f09) and add it to your keychain.
+
+You will then need to generate an app-specific password for that Apple ID. This is not the same as the password that you use to sign in to your developer account. You can create this app-specific password, here: https://appleid.apple.com
+
+After completing those two steps, create a `.env` file in the root of this project. It should look something like:
+
+```
+APPLEID=test@someemail.com
+APPLEIDPASS=xxxx-tttt-vvvv-aaaa
+```
+
 ## Customizing the App
 
 The pages I have set up probably won't be the same as what you need, since they are specific to my needs. These pages are easy to customize. They just run off of a naming convention. For example, to add a "Play Store" page:
@@ -50,3 +67,19 @@ The pages I have set up probably won't be the same as what you need, since they 
 3. Add `play-store` to the `navLinks` array, in the `loader.js` file. It will automatically be added to whatever position you have defined.
 
 The naming will need to be consistent across these three locations.
+
+## License
+
+    Copyright 2018 Luke Klinker
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

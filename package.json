@@ -1,6 +1,6 @@
 {
    "name": "klinker-apps",
-   "version": "v3.1.0",
+   "version": "v3.2.0",
    "description": "A dashboard application for Klinker Apps",
    "main": "main.js",
    "scripts": {
@@ -31,10 +31,17 @@
       "appId": "xyz.klinker.dashboard",
       "productName": "Klinker Apps Dashboard",
       "artifactName": "klinker-apps-${version}-${arch}.${ext}",
-      "forceCodeSigning": false,
+      "afterSign": "build/notarize.js",
       "mac": {
-         "category": "public.app-category.utilities"
-      },
+         "category": "public.app-category.utilities",
+         "hardenedRuntime": true,
+         "gatekeeperAssess": false,
+         "entitlements": "build/entitlements.mac.plist",
+         "entitlementsInherit": "build/entitlements.mac.plist"
+       },
+       "dmg": {
+         "sign": false
+       },
       "publish": [
          {
             "provider": "github",
@@ -45,8 +52,11 @@
       ]
    },
    "devDependencies": {
-    "electron": "6.0.1",
-    "electron-builder": "21.2.0"
+    "@types/node": "^12.6.8",
+    "dotenv": "^8.1.0",
+    "electron": "6.0.12",
+    "electron-builder": "21.2.0",
+    "electron-notarize": "^0.1.1"
    },
    "dependencies": {
       "electron-window-state": "5.0.3"
