@@ -79,7 +79,7 @@
 
 
     if (process.platform === 'darwin') {
-        const name = require('electron').app.getName()
+        const name = require('electron').app.name
         template.unshift({
             label: name,
             submenu: [{
@@ -109,7 +109,7 @@
           const win = windowProvider.getWindow();
           const menuVisible = win.isMenuBarVisible();
 
-          win.setAutoHideMenuBar(menuVisible);
+          win.autoHideMenuBar =menuVisible;
           win.setMenuBarVisibility(!menuVisible);
         },
         label: "Toggle Menu Bar Visibility",

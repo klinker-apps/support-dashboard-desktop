@@ -41,7 +41,7 @@
         event.preventDefault()
       })
 
-      window.setAutoHideMenuBar(true)
+      window.autoHideMenuBar = true;
       window.setMenuBarVisibility(false)
 
       setWindow(window)
