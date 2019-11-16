@@ -115,21 +115,21 @@ app-builder-bin@3.4.4:
   resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-3.4.4.tgz#6f244edb7bd5e482defc472ef0c15692b569f211"
   integrity sha512-Xib+wgdK+8zZhbZr5pma3pNB23Y4JRY5Yt6h8peou6MTFSQzXdIkqalh/ezy9SMLuS43S4b0s7jTVAmUs8WVmA==
 
-app-builder-lib@22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-22.0.0.tgz#e5ea3b676724d3dbaaca2f800aa20aef8f402db9"
-  integrity sha512-4Q7JDb2lm6lNvtQxhjgjl2w9u3KuVOiNN6MFY46MWABkFbJbic8GDrQnktYPKOJ5p/KwV2itxcz6F+xAIgc15A==
+app-builder-lib@22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-22.1.0.tgz#6df869d882406f34b4b02cab4c3ddb7926e420ec"
+  integrity sha512-jDTfWsVS/MePO4FexqiSQcsWM9Yfr81ETIYbmVbKmW05o0dn9k1DvMOMoLb0kTLQpW+pWBVvGMAOPfk68HnBrg==
   dependencies:
     "7zip-bin" "~5.0.3"
     "@develar/schema-utils" "~2.1.0"
     async-exit-hook "^2.0.1"
     bluebird-lst "^1.0.9"
-    builder-util "22.0.0"
+    builder-util "22.1.0"
     builder-util-runtime "8.4.0"
     chromium-pickle-js "^0.2.0"
     debug "^4.1.1"
     ejs "^2.7.1"
-    electron-publish "22.0.0"
+    electron-publish "22.1.0"
     fs-extra "^8.1.0"
     hosted-git-info "^3.0.0"
     is-ci "^2.0.0"
@@ -262,10 +262,10 @@ builder-util@21.2.0, builder-util@~21.2.0:
     stat-mode "^0.3.0"
     temp-file "^3.3.4"
 
-builder-util@22.0.0, builder-util@~22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-22.0.0.tgz#97a0ee9b5f87b268af4fd6f3d1bc1a44af833a7e"
-  integrity sha512-fLTdykjOr1PWubJaj7LukaDJ1THqPkyTgJWswen6fn6TWUngZyDmAcg9hk4Aa1nf4BvyGx/iJCUhYjCkwpmimA==
+builder-util@22.1.0, builder-util@~22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-22.1.0.tgz#2b33145d053778e95389d5aee659256ebdb1c2ca"
+  integrity sha512-BPvpWvxQ5XOzm2WepIgmOAyo2IyaM/Bd1LJmeTYy5CtknNAtxgmAPQJfCHCikMKKQA4Obz/KYecXQiGpGJ2ThA==
   dependencies:
     "7zip-bin" "~5.0.3"
     "@types/debug" "^4.1.5"
@@ -496,14 +496,14 @@ ejs@^2.7.1:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.1.tgz#5b5ab57f718b79d4aca9254457afecd36fa80228"
   integrity sha512-kS/gEPzZs3Y1rRsbGX4UOSjtP/CeJP0CxSNZHYxGfVM/VgLcv0ZqM7C45YyTj2DI2g7+P9Dd24C+IMIg6D0nYQ==
 
-electron-builder@22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-22.0.0.tgz#94716efdb31bedad167c3d4ea595c095a54f605a"
-  integrity sha512-OFqj5yYtEZBZwcOnyKe+YmL1VYNKw8o5lZlJAGQMX1xKzZPw8ZiaRZKVzn9k34ykANbz1FsBqwrt+lzVjrPIuQ==
+electron-builder@22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-22.1.0.tgz#65b23411e3c39a83b52743ed18980b97f8314d50"
+  integrity sha512-uu2W9BLG38D0i2PG6dHupmOYc+q/TRL+Ztf8xitqK+2Quq33PFbeN0ipfySuVEDg4I6whDRBOgxBEWwnUYqZZQ==
   dependencies:
-    app-builder-lib "22.0.0"
+    app-builder-lib "22.1.0"
     bluebird-lst "^1.0.9"
-    builder-util "22.0.0"
+    builder-util "22.1.0"
     builder-util-runtime "8.4.0"
     chalk "^2.4.2"
     dmg-builder "21.2.0"
@@ -536,13 +536,13 @@ electron-publish@21.2.0:
     lazy-val "^1.0.4"
     mime "^2.4.4"
 
-electron-publish@22.0.0:
-  version "22.0.0"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-22.0.0.tgz#af372f3553b92140ee8932be2d4254adf0ccddce"
-  integrity sha512-eeHa229kvvdl3OXbzE+d2xMTfHs3qOjQshF03vTyG19eFmvCx8eCkeCTEhT9QPb9kmkexV7FRAJpEwO2k1AtMA==
+electron-publish@22.1.0:
+  version "22.1.0"
+  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-22.1.0.tgz#730ee3801e47acdbb1c81ed7fc4ebc6b30d2a8aa"
+  integrity sha512-jHjMCaL2dFU+iOq8wW568F59+DW1jFJGT3vc2xqm9iXyZ8gWlQ+NVve4bq9HZG7m4iNqWbGw9StmZcOzmIBxMQ==
   dependencies:
     bluebird-lst "^1.0.9"
-    builder-util "~22.0.0"
+    builder-util "~22.1.0"
     builder-util-runtime "8.4.0"
     chalk "^2.4.2"
     fs-extra "^8.1.0"
@@ -557,10 +557,10 @@ electron-window-state@5.0.3:
     jsonfile "^4.0.0"
     mkdirp "^0.5.1"
 
-electron@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-7.0.0.tgz#47a5b15ca213f32c20d85f82a1be615a74cdf55f"
-  integrity sha512-vrF1loRW1p0vQCbduqO0EZpo8ePJOuxUT6tSoUSU3lsbGK3VnlJop+0PpCIPzbe2K4G4Gk7WexH08V9se7mJcA==
+electron@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-7.1.1.tgz#98be17d850e64689a09ab6dd1e437b36307f2fcf"
+  integrity sha512-NJPv4SuMJlRUtXBd/Ey9XKSLOZ4+hxsOrHHPXwrBQNNdeZesoSrTMgPymee/FwMRtrSt0Pz8NccEZUu/pxmbhQ==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
