@@ -1,5 +1,3 @@
-// const fs = require('fs')
-// const path = require('path')
 // const renderer = require('./renderer.js')
 
 var current = null;
@@ -16,17 +14,9 @@ var openPage = (pageName = "gmail") => {
   xhr.open("GET", "pages/" + pageName + ".html", true);
   xhr.onreadystatechange = function() {
     document.getElementById("content").innerHTML = this.responseText;
+    // renderer.initPage()
   };
   xhr.send();
-  // fs.readFile(path.join(__dirname, 'pages/' + pageName + '.html'), (err, data) => {
-  //   if (err) {
-  //     console.log(err)
-  //     return
-  //   }
-
-  //   document.getElementById('content').innerHTML = data
-  //   // renderer.initPage()
-  // })
 };
 
 // default to email page.
