@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Support Dashboard",
+  "short_name": "Support Dashboard",
+  "description": "Chrome version of the support dashboard",
+  "version": "1.0.0",
+  "minimum_chrome_version": "38",
+  "permissions": ["webview", "storage", "background"],
+  "author": "Luke Klinker",
+  "icons": {
+    "16": "build/icons/16x16.png",
+    "48": "build/icons/48x48.png",
+    "96": "build/icons/96x96.png",
+    "128": "build/icons/128x128.png",
+    "256": "build/icons/256x256.png"
+  },
+  "app": {
+    "background": {
+      "scripts": ["chrome-app.js"]
+    }
+  }
+}
