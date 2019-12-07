@@ -68,6 +68,10 @@ The pages I have set up probably won't be the same as what you need, since they 
 
 The naming will need to be consistent across these three locations.
 
+## Chrome App Version
+
+This is also a compatible Chrome app. To load it through Chrome, rather than Electron, open `chrome://extensions`, select `Load Unpacked`, then just navigate to this project folder. Chrome will load it based on the `manifest.json` file.
+
 ## License
 
     Copyright 2018 Luke Klinker
