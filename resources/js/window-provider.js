@@ -9,6 +9,8 @@
     let mainWindow = null
 
     var createMainWindow = () => {
+      const userAgent = 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10136'
+
       let mainWindowState = windowStateKeeper({
         defaultWidth: 1000,
         defaultHeight: 750
@@ -21,7 +23,7 @@
         'height': mainWindowState.height,
         'titleBarStyle': 'hidden',
         webPreferences: {
-          nodeIntegration: true,
+          nodeIntegration: false,
           webviewTag: true
         }
       })
@@ -30,7 +32,7 @@
         pathname: path.join(__dirname, '../../index.html'),
         protocol: 'file:',
         slashes: true
-      }))
+      }), { userAgent: userAgent })
 
       window.on('close', function(event) {
         event.preventDefault()

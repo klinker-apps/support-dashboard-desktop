@@ -51,6 +51,14 @@ for (let i = 0; i < navLinks.length; i++) {
   });
 }
 
+var tryCatch = (code) => {
+  return "try { " + code + " } catch (err) { }"
+}
+
+var definePlayStorePrefixItem = () => {
+  return `var item = document.querySelectorAll('[role="status"]')[0].className; item = item.substring(0, item.indexOf("-"));`
+}
+
 var initPage = () => {
   var email = document.getElementById("email");
 
