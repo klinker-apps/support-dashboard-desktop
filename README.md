@@ -70,7 +70,9 @@ The naming will need to be consistent across these three locations.
 
 ## Chrome App Version
 
-This is also a compatible Chrome app. To load it through Chrome, rather than Electron, open `chrome://extensions`, select `Load Unpacked`, then just navigate to this project folder. Chrome will load it based on the `manifest.json` file.
+This is also a compatible Chrome app. To load it through Chrome, rather than Electron, open `chrome://extensions`, select `Load Unpacked`, then just navigate to this project folder. Chrome will load it based on the `manifest.json` file. 
+
+This is actually the way I do it most of the time, to avoid having to maintain Electron. With Chrome, you get all of the new Chrome optimization automatically, when Chrome updates.
 
 ## License
 
