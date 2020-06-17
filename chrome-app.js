@@ -33,27 +33,22 @@ chrome.app.runtime.onLaunched.addListener(function() {
     "index.html",
     windowOptions,
     function(window) {
-      // window.contentWindow.onload = function() {
-      //   // Retrieve the webview element
-      //   var webview = window.contentWindow.document.querySelector("#calendar");
-      //   webview.setUserAgentOverride(navigator.userAgent + " chrome-app");
+      window.contentWindow.onload = function() {
+        // Retrieve the webview element
+        var webview = window.contentWindow.document.querySelector("#email");
 
-      //   webview.addEventListener("newwindow", function(e) {
-      //     // open the link in a new chrome tab
-      //     e.preventDefault();
-      //     if (e.targetUrl.indexOf("google") === -1) {
-      //       win.open(e.targetUrl);
-      //     } else {
-      //       webview.src = e.targetUrl;
-      //     }
-      //   });
+        webview.addEventListener("newwindow", function(e) {
+          // open the link in a new chrome tab
+          e.preventDefault();
+          win.open(e.targetUrl);
+        });
 
-      //   webview.addEventListener("dialog", function(e) {
-      //     // automatically accept the dialog
-      //     e.preventDefault();
-      //     e.dialog.ok("accepted");
-      //   });
-      // };
+        webview.addEventListener("dialog", function(e) {
+          // automatically accept the dialog
+          e.preventDefault();
+          e.dialog.ok("accepted");
+        });
+      };
     }
   );
 });
