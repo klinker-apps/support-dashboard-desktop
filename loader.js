@@ -24,12 +24,12 @@ let navString = "";
 let navLinks = [
   "gmail",
   "slack",
-  "pulse",
+  // "pulse",
   "talon",
-  "purchase",
+  // "purchase",
   "github",
   "twitter",
-  "cloud-consoles",
+  // "cloud-consoles",
   "jenkins"
 ];
 
