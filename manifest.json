@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Support Dashboard",
-  "short_name": "Support Dashboard",
+  "name": "Klinker Apps Dashboard",
+  "short_name": "Klinker Apps Dashboard",
   "description": "Chrome version of the support dashboard",
   "version": "1.0.0",
   "minimum_chrome_version": "38",
